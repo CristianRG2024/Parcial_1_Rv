@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -22,8 +23,8 @@ public class scoreManager : MonoBehaviour
 {
     public static scoreManager s_ScoreManager;
 
-    public TMP_Text textoNombre;
-    public TMP_Text textoMail;
+    public TMP_InputField textoNombre;
+    public TMP_InputField textoMail;
 
     private string playerName;
     private string playerMail;
@@ -45,14 +46,14 @@ public class scoreManager : MonoBehaviour
     // Actualizar datos del player actual
     public bool setPersonalData()
     {
-        if (textoNombre.text != "" && textoMail.text != "")
+        if (string.IsNullOrEmpty(textoNombre.text) || string.IsNullOrEmpty(textoMail.text))
         {
+            return false;
+        }
+        else{
             playerName = textoNombre.text;
             playerMail = textoMail.text;
             return true;
-        }
-        else {
-            return false;
         }
     }
     public void setData(int newCoinsCollected, float newGameTime) {
