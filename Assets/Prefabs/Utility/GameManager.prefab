@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2814330383192848174}
   - component: {fileID: 3365379724507452156}
-  - component: {fileID: 3995013115556283786}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -50,17 +49,7 @@ MonoBehaviour:
   factorReduccionVelocidad: 8
   distanciaRetroceso: 1.8
   velMovCam: 5
-  playerName: 
   canvasGameOver: {fileID: 0}
---- !u!114 &3995013115556283786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438901308468865663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80e8799e31eee744ca89898f9aa373cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  canvasLeaderboard: {fileID: 0}
+  textoPuntuaciones: {fileID: 0}
+  playerName: 

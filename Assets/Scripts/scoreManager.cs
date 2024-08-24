@@ -1,11 +1,13 @@
 using System.Collections.Generic;
 using System.IO;
+using TMPro;
 using UnityEngine;
 
 [System.Serializable]
 public class PlayerData
 {
     public string playerName;
+    public string playerMail;
     public int coinsCollected;
     public float gameTime;
 }
@@ -18,18 +20,42 @@ public class GameData
 
 public class scoreManager : MonoBehaviour
 {
+    public static scoreManager s_ScoreManager;
+
+    public TMP_Text textoNombre;
+    public TMP_Text textoMail;
+
     private string playerName;
+    private string playerMail;
     private int coinsCollected;
     private float gameTime;
 
     private string filePath;
 
+    private void Awake()
+    {
+        s_ScoreManager = this;
+        DontDestroyOnLoad(gameObject);
+    }
     void Start()
     {
         filePath = "Assets/JsonFile" + "/Leaderboard.json";
     }
-    public void setData(string newPlayerName, int newCoinsCollected, float newGameTime) {
-        playerName = newPlayerName;
+
+    // Actualizar datos del player actual
+    public bool setPersonalData()
+    {
+        if (textoNombre.text != "" && textoMail.text != "")
+        {
+            playerName = textoNombre.text;
+            playerMail = textoMail.text;
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    public void setData(int newCoinsCollected, float newGameTime) {
         coinsCollected = newCoinsCollected;
         gameTime = newGameTime;
     }
@@ -49,6 +75,7 @@ public class scoreManager : MonoBehaviour
         PlayerData newPlayerData = new PlayerData
         {
             playerName = playerName,
+            playerMail = playerMail,
             coinsCollected = coinsCollected,
             gameTime = gameTime
         };
@@ -63,7 +90,7 @@ public class scoreManager : MonoBehaviour
         Debug.Log("Datos guardados en: " + filePath);
     }
 
-    // CÓDIGO PARA CARGAR TABLA DE PUNTUACIÓN
+    // Cargar tabla de puntuación
     private GameData loadLeaderboardData()
     {
         if (File.Exists(filePath))

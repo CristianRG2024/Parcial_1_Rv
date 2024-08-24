@@ -25,7 +25,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text textoPuntuaciones;
 
     //Variables de uso interno
-    public string playerName;
     float tiempoPartida;
     int monedasRecogidas;
     private bool gameRunning;
@@ -37,7 +36,7 @@ public class GameManager : MonoBehaviour
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        leaderboard = this.GetComponent<scoreManager>();
+        leaderboard = scoreManager.s_ScoreManager;
     }
     void Start()
     {
@@ -77,7 +76,7 @@ public class GameManager : MonoBehaviour
         canvasGameOver.SetActive(true);
 
         // Actualizar leaderboard
-        leaderboard.setData(playerName, monedasRecogidas, tiempoPartida);
+        leaderboard.setData(monedasRecogidas, tiempoPartida);
         leaderboard.saveGameData();
         cargarPuntajes();
     }
