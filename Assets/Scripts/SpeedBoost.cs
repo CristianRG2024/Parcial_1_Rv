@@ -13,6 +13,7 @@ public class SpeedBoost : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             if (!GameManager.s_gameManager.isBoosting) {
+                GameManager.s_gameManager.isBoosting = true;
                 velActual = GameManager.s_gameManager.velocidadNivel;
                 GameManager.s_gameManager.velocidadNivel *= boostAmount;
                 StartCoroutine(ResetSpeedAfterTime(duration));
