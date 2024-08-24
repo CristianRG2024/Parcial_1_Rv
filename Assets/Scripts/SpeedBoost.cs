@@ -8,11 +8,16 @@ public class SpeedBoost : MonoBehaviour
     public float duration = 5f; // Duración del aumento de velocidad en segundos
     private float velActual;
 
+    [SerializeField] private AudioClip zoomBoost;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+
             if (!GameManager.s_gameManager.isBoosting) {
+                Camera.main.GetComponent<AudioSource>().PlayOneShot(zoomBoost);
+
                 GameManager.s_gameManager.isBoosting = true;
                 velActual = GameManager.s_gameManager.velocidadNivel;
                 GameManager.s_gameManager.velocidadNivel *= boostAmount;

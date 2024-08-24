@@ -99,6 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiempoDePersecucion: 4
   tagComparar: Moneda
+  ClickMoneda: {fileID: 8300000, guid: fc2a6d14efac48c49ab63323cfc26442, type: 3}
 --- !u!54 &9059872240726078229
 Rigidbody:
   m_ObjectHideFlags: 0

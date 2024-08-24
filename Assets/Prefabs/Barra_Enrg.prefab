@@ -166,3 +166,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boostAmount: 1.7
   duration: 5
+  zoomBoost: {fileID: 8300000, guid: 760d7fd6db3bde4448ddfd631835202c, type: 3}

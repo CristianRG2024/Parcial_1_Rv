@@ -12,6 +12,9 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private float tiempoDePersecucion = 5.0f;
     [SerializeField] private string tagComparar = "Moneda";
     float tiempoTranscurridoPersecucion;
+
+    [SerializeField] private AudioClip ClickMoneda;
+
     void Start()
     {
         player = FindObjectOfType<PlayerMovement>();
@@ -67,6 +70,7 @@ public class PlayerManager : MonoBehaviour
         {
             Destroy(other.gameObject);
             gameManager.recogerMoneda();
+            Camera.main.GetComponent<AudioSource>().PlayOneShot(ClickMoneda);
         }
     }
 }
