@@ -24,7 +24,7 @@ public class SpeedBoost : MonoBehaviour
     IEnumerator ResetSpeedAfterTime(float time)
     {
         yield return new WaitForSeconds(time);
-        GameManager.s_gameManager.velocidadNivel = velActual;
         GameManager.s_gameManager.isBoosting = false;
+        GameManager.s_gameManager.velocidadNivel = velActual;
     }
 }

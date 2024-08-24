@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     public float velocidadNivel;
     public float velocidadLim;
     public float factorReduccionVelocidad;
-    public bool isBoosting;
+    [HideInInspector]public bool isBoosting;
     [Header("Variables de Funcionamiento Cámara")]
     [SerializeField] private float distanciaRetroceso = 1.8f;
     [SerializeField] private float velMovCam = 5f;
@@ -56,7 +56,6 @@ public class GameManager : MonoBehaviour
         if (gameRunning)
         {
             tiempoPartida += Time.deltaTime;
-            //Debug.Log("tiempo: " + Mathf.Floor(tiempoPartida));
             if (velocidadNivel <= velocidadLim)
             {
                 velocidadNivel += Time.deltaTime / factorReduccionVelocidad;
@@ -67,6 +66,7 @@ public class GameManager : MonoBehaviour
             Camera.main.transform.localPosition = Vector3.Slerp(Camera.main.transform.localPosition, newPosCamera, velMovCam * Time.deltaTime);
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+            velocidadNivel = 0;
         }
     }
     public void gameOver()
