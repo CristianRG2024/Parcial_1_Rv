@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public float velocidadNivel;
     public float velocidadLim;
     public float factorReduccionVelocidad;
+    public bool isBoosting;
     [Header("Variables de Funcionamiento Cámara")]
     [SerializeField] private float distanciaRetroceso = 1.8f;
     [SerializeField] private float velMovCam = 5f;
@@ -44,6 +45,7 @@ public class GameManager : MonoBehaviour
         canvasLeaderboard.SetActive(false);
 
         gameRunning = true;
+        isBoosting = false;
         tiempoPartida = 0;
         monedasRecogidas = 0;
 

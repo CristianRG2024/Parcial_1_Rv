@@ -12,9 +12,11 @@ public class SpeedBoost : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            velActual = GameManager.s_gameManager.velocidadNivel;
-            GameManager.s_gameManager.velocidadNivel *= boostAmount;
-            StartCoroutine(ResetSpeedAfterTime(duration));
+            if (!GameManager.s_gameManager.isBoosting) {
+                velActual = GameManager.s_gameManager.velocidadNivel;
+                GameManager.s_gameManager.velocidadNivel *= boostAmount;
+                StartCoroutine(ResetSpeedAfterTime(duration));
+            }
         }
     }
 
@@ -22,5 +24,6 @@ public class SpeedBoost : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         GameManager.s_gameManager.velocidadNivel = velActual;
+        GameManager.s_gameManager.isBoosting = false;
     }
 }

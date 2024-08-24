@@ -41,6 +41,12 @@
             "playerMail": "qqq",
             "coinsCollected": 3,
             "gameTime": 5.839995384216309
+        },
+        {
+            "playerName": "Andres",
+            "playerMail": "Correo",
+            "coinsCollected": 10,
+            "gameTime": 5.839995384216309
         }
     ]
 }
