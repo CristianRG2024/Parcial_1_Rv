@@ -94,6 +94,16 @@
             "playerName": "EXORBITANTE",
             "coinsCollected": 32,
             "gameTime": 20.540279388427736
+        },
+        {
+            "playerName": "PRUEBA",
+            "coinsCollected": 16,
+            "gameTime": 15.30016040802002
+        },
+        {
+            "playerName": "PRUEBA",
+            "coinsCollected": 16,
+            "gameTime": 15.30016040802002
         }
     ]
 }
