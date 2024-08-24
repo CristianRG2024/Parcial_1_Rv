@@ -94,6 +94,51 @@
             "playerName": "EXORBITANTE",
             "coinsCollected": 32,
             "gameTime": 20.540279388427736
+        },
+        {
+            "playerName": "PRUEBA",
+            "coinsCollected": 21,
+            "gameTime": 18.120223999023439
+        },
+        {
+            "playerName": "PRUEBA",
+            "coinsCollected": 10,
+            "gameTime": 33.74058151245117
+        },
+        {
+            "playerName": "PRUEBA",
+            "coinsCollected": 0,
+            "gameTime": 5.079996109008789
+        },
+        {
+            "playerName": "PRUEBA",
+            "coinsCollected": 3,
+            "gameTime": 3.799997091293335
+        },
+        {
+            "playerName": "PRUEBA",
+            "coinsCollected": 3,
+            "gameTime": 3.799997091293335
+        },
+        {
+            "playerName": "PRUEBA",
+            "coinsCollected": 1,
+            "gameTime": 3.919996976852417
+        },
+        {
+            "playerName": "PRUEBA",
+            "coinsCollected": 3,
+            "gameTime": 6.8799943923950199
+        },
+        {
+            "playerName": "PRUEBA",
+            "coinsCollected": 8,
+            "gameTime": 6.8799943923950199
+        },
+        {
+            "playerName": "PRUEBA",
+            "coinsCollected": 15,
+            "gameTime": 39.860721588134769
         }
     ]
 }

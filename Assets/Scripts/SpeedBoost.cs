@@ -2,16 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class SpeedBoost : MonoBehaviour
 {
-    // Start is called before the first frame update
     public float boostAmount = 2f; // Aumento de velocidad (x2 en este caso)
     public float duration = 5f; // Duración del aumento de velocidad en segundos
+    private float velActual;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
+            velActual = GameManager.s_gameManager.velocidadNivel;
             GameManager.s_gameManager.velocidadNivel *= boostAmount;
             StartCoroutine(ResetSpeedAfterTime(duration));
         }
@@ -20,6 +21,6 @@ public class NewBehaviourScript : MonoBehaviour
     IEnumerator ResetSpeedAfterTime(float time)
     {
         yield return new WaitForSeconds(time);
-        GameManager.s_gameManager.velocidadNivel = GameManager.s_gameManager.velocidadLim;
+        GameManager.s_gameManager.velocidadNivel = velActual;
     }
 }
