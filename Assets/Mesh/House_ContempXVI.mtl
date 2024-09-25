@@ -1,0 +1,516 @@
+# Alias Wavefront MTL File Exported from SketchUp
+# with OBJexporter (c) 2013 TIG
+# Made for 'House_ContempXVI.obj'
+
+newmtl Default_Material
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+
+newmtl SUC_Wood_019
+Ka 0.717647 0.462745 0.105882
+Kd 0.717647 0.462745 0.105882
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+map_Kd House_ContempXVI_Textures/SUC_Wood_019.jpg
+
+newmtl Translucent_Glass_Gray
+Ka 0.501961 0.501961 0.501961
+Kd 0.501961 0.501961 0.501961
+Ks 0.333 0.333 0.333
+Ns 0
+d 0.5
+Tr 0.5
+
+newmtl SW_7664_Steely_Gray
+Ka 0.564706 0.588235 0.607843
+Kd 0.564706 0.588235 0.607843
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+
+newmtl 00_MyCust_1
+Ka 0.788235 0.784314 0.768627
+Kd 0.788235 0.784314 0.768627
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+map_Kd House_ContempXVI_Textures/00_MyCust_1.jpg
+
+newmtl SW_7656_Rhinestone
+Ka 0.870588 0.878431 0.87451
+Kd 0.870588 0.878431 0.87451
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+
+newmtl 00_TaME_Bronze02
+Ka 0.698039 0.564706 0.227451
+Kd 0.698039 0.564706 0.227451
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+map_Kd House_ContempXVI_Textures/00_TaME_Bronze02.jpg
+
+newmtl SUC-Concrete-005
+Ka 0.929412 0.92549 0.913725
+Kd 0.929412 0.92549 0.913725
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+map_Kd House_ContempXVI_Textures/SUC-Concrete-005.jpg
+
+newmtl SW_6210_Window_Pane
+Ka 0.882353 0.921569 0.890196
+Kd 0.882353 0.921569 0.890196
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+
+newmtl SW_6231_Rock_Candy
+Ka 0.87451 0.870588 0.890196
+Kd 0.87451 0.870588 0.890196
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+
+newmtl SW_6364_Eggwhite
+Ka 0.964706 0.901961 0.839216
+Kd 0.964706 0.901961 0.839216
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+
+newmtl SW_6014_Quartz_White
+Ka 0.913725 0.87451 0.878431
+Kd 0.913725 0.87451 0.878431
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+
+newmtl SW_6120_Believable_Buff
+Ka 0.929412 0.847059 0.72549
+Kd 0.929412 0.847059 0.72549
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+
+newmtl SW_6182_Ethereal_White
+Ka 0.960784 0.941176 0.917647
+Kd 0.960784 0.941176 0.917647
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+
+newmtl SW_7506_Loggia
+Ka 0.764706 0.72549 0.647059
+Kd 0.764706 0.72549 0.647059
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+
+newmtl SW_7505_Manor_House
+Ka 0.388235 0.356863 0.333333
+Kd 0.388235 0.356863 0.333333
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+
+newmtl Brick_Rough_Dark
+Ka 0.917647 0.913725 0.901961
+Kd 0.917647 0.913725 0.901961
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+map_Kd House_ContempXVI_Textures/Brick_Rough_Dark.jpg
+
+newmtl Texture_Stucco25
+Ka 0.976471 0.972549 0.964706
+Kd 0.976471 0.972549 0.964706
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+map_Kd House_ContempXVI_Textures/Texture_Stucco25.jpg
+
+newmtl suc-paving-007
+Ka 0.780392 0.741176 0.698039
+Kd 0.780392 0.741176 0.698039
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+map_Kd House_ContempXVI_Textures/suc-paving-007.jpg
+
+newmtl Waverly-006-02
+Ka 0.592157 0.513725 0.372549
+Kd 0.592157 0.513725 0.372549
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+map_Kd House_ContempXVI_Textures/Waverly-006-02.jpg
+
+newmtl Waverly-007-01
+Ka 0.403922 0.486275 0.466667
+Kd 0.403922 0.486275 0.466667
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+map_Kd House_ContempXVI_Textures/Waverly-007-01.jpg
+
+newmtl tile152-02
+Ka 0.568627 0.494118 0.509804
+Kd 0.568627 0.494118 0.509804
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+map_Kd House_ContempXVI_Textures/tile152-02.jpg
+
+newmtl Waverly-006-03
+Ka 0.521569 0.439216 0.329412
+Kd 0.521569 0.439216 0.329412
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+map_Kd House_ContempXVI_Textures/Waverly-006-03.jpg
+
+newmtl Waverly-007-01WI
+Ka 0.52549 0.509804 0.596078
+Kd 0.52549 0.509804 0.596078
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+map_Kd House_ContempXVI_Textures/Waverly-007-01WI.jpg
+
+newmtl Waverly-007-01I
+Ka 0.592157 0.509804 0.529412
+Kd 0.592157 0.509804 0.529412
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+map_Kd House_ContempXVI_Textures/Waverly-007-01I.jpg
+
+newmtl Waverly-006-02WI
+Ka 0.623529 0.482353 0.407843
+Kd 0.623529 0.482353 0.407843
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+map_Kd House_ContempXVI_Textures/Waverly-006-02WI.jpg
+
+newmtl tile152-2
+Ka 0.666667 0.580392 0.411765
+Kd 0.666667 0.580392 0.411765
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+map_Kd House_ContempXVI_Textures/tile152-2.jpg
+
+newmtl tile152-3
+Ka 0.6 0.607843 0.698039
+Kd 0.6 0.607843 0.698039
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+map_Kd House_ContempXVI_Textures/tile152-3.jpg
+
+newmtl tile152-1
+Ka 0.509804 0.619608 0.592157
+Kd 0.509804 0.619608 0.592157
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+map_Kd House_ContempXVI_Textures/tile152-1.jpg
+
+newmtl SUC_Floor_024
+Ka 0.513725 0.309804 0.0784314
+Kd 0.513725 0.309804 0.0784314
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+map_Kd House_ContempXVI_Textures/SUC_Floor_024.jpg
+
+newmtl Vegetation_Lanceolate
+Ka 0.341176 0.443137 0.160784
+Kd 0.341176 0.443137 0.160784
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+map_Kd House_ContempXVI_Textures/Vegetation_Lanceolate.jpg
+
+newmtl Pink_Hopscotch
+Ka 0.72549 0.568627 0.458824
+Kd 0.72549 0.568627 0.458824
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+map_Kd House_ContempXVI_Textures/Pink_Hopscotch.jpg
+
+newmtl roof-beaver-tail1
+Ka 0.521569 0.301961 0.227451
+Kd 0.521569 0.301961 0.227451
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+map_Kd House_ContempXVI_Textures/roof-beaver-tail1.jpg
+
+newmtl SW_7083_Darkroom
+Ka 0.247059 0.180392 0.211765
+Kd 0.247059 0.180392 0.211765
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+
+newmtl 0133_Gray
+Ka 0.501961 0.501961 0.501961
+Kd 0.501961 0.501961 0.501961
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+
+newmtl 0020_Red
+Ka 1 0 0
+Kd 1 0 0
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+
+newmtl 0103_Blue
+Ka 0 0 1
+Kd 0 0 1
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+
+newmtl 0136_Charcoal
+Ka 0.137255 0.137255 0.137255
+Kd 0.137255 0.137255 0.137255
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+
+newmtl 0021_DarkRed
+Ka 0.545098 0 0
+Kd 0.545098 0 0
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+
+newmtl 0006_Pink
+Ka 1 0.752941 0.796078
+Kd 1 0.752941 0.796078
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+
+newmtl 0135_DarkGray
+Ka 0.317647 0.317647 0.317647
+Kd 0.317647 0.317647 0.317647
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+
+newmtl SUC_Wood_009
+Ka 0.733333 0.611765 0.388235
+Kd 0.733333 0.611765 0.388235
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+map_Kd House_ContempXVI_Textures/SUC_Wood_009.jpg
+
+newmtl Sandstone
+Ka 0.654902 0.584314 0.45098
+Kd 0.654902 0.584314 0.45098
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+map_Kd House_ContempXVI_Textures/Sandstone.jpg
+
+newmtl SW_6253_Olympus_White
+Ka 0.94902 0.952941 0.968627
+Kd 0.94902 0.952941 0.968627
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+
+newmtl Metal_Corrogated_Shiny
+Ka 0.756863 0.756863 0.756863
+Kd 0.756863 0.756863 0.756863
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+map_Kd House_ContempXVI_Textures/Metal_Corrogated_Shiny.jpg
+
+newmtl red
+Ka 1 0 0
+Kd 1 0 0
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+
+newmtl Material3
+Ka 0.572549 0.501961 0.4
+Kd 0.572549 0.501961 0.4
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+map_Kd House_ContempXVI_Textures/Material3.jpg
+
+newmtl 0131_Silver
+Ka 0.752941 0.752941 0.752941
+Kd 0.752941 0.752941 0.752941
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+
+newmtl Color_005
+Ka 0.447059 0.447059 0.447059
+Kd 0.447059 0.447059 0.447059
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+
+newmtl Translucent_Glass_Green_Dark
+Ka 0.243137 0.356863 0.0196078
+Kd 0.243137 0.356863 0.0196078
+Ks 0.333 0.333 0.333
+Ns 0
+d 0.85
+Tr 0.85
+
+newmtl tile004-041-050-47
+Ka 0.854902 0.831373 0.756863
+Kd 0.854902 0.831373 0.756863
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+map_Kd House_ContempXVI_Textures/tile004-041-050-47.jpg
+
+newmtl 0029_BlanchedAlmond1
+Ka 1 0.921569 0.803922
+Kd 1 0.921569 0.803922
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+
+newmtl Translucent_Glass_Safety1
+Ka 0.207843 0.207843 0.207843
+Kd 0.207843 0.207843 0.207843
+Ks 0.333 0.333 0.333
+Ns 0
+d 0.5
+Tr 0.5
+map_Kd House_ContempXVI_Textures/Translucent_Glass_Safety1.jpg
+
+newmtl Fencing_Diamond_Mesh
+Ka 0.615686 0.607843 0.6
+Kd 0.615686 0.607843 0.6
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+map_Kd House_ContempXVI_Textures/Fencing_Diamond_Mesh.png
+
+newmtl Color_007
+Ka 0.227451 0.227451 0.227451
+Kd 0.227451 0.227451 0.227451
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+
+newmtl 0134_DimGray
+Ka 0.411765 0.411765 0.411765
+Kd 0.411765 0.411765 0.411765
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+
+newmtl Color_009
+Ka 0 0 0
+Kd 0 0 0
+Ks 0.333 0.333 0.333
+Ns 0
+d 0.8
+Tr 0.8
+
+newmtl 00_TaME_MetalBrushedAluminum01
+Ka 0.780392 0.784314 0.784314
+Kd 0.780392 0.784314 0.784314
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+map_Kd House_ContempXVI_Textures/00_TaME_MetalBrushedAluminum01.jpg
+
+newmtl Translucent_Glass_Block_Light
+Ka 0.658824 0.686275 0.756863
+Kd 0.658824 0.686275 0.756863
+Ks 0.333 0.333 0.333
+Ns 0
+d 0.8
+Tr 0.8
+map_Kd House_ContempXVI_Textures/Translucent_Glass_Block_Light.jpg
+
+newmtl Copper01
+Ka 0.545098 0.352941 0.129412
+Kd 0.545098 0.352941 0.129412
+Ks 0.333 0.333 0.333
+Ns 0
+d 1
+Tr 1
+map_Kd House_ContempXVI_Textures/Copper01.jpg
+
+#EOF
