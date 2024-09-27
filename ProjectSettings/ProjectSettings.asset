@@ -47,7 +47,7 @@ PlayerSettings:
   defaultScreenWidthWeb: 960
   defaultScreenHeightWeb: 600
   m_StereoRenderingPath: 0
-  m_ActiveColorSpace: 1
+  m_ActiveColorSpace: 0
   unsupportedMSAAFallback: 0
   m_SpriteBatchVertexThreshold: 300
   m_MTRendering: 1
@@ -162,6 +162,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.DefaultCompany.Parcial_1_Rv
+    Standalone: com.DefaultCompany.Parcial-1-Rv
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -867,8 +868,8 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Parcial_1_Rv
-  metroPackageVersion: 
+  metroPackageName: Parcial1Rv
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -876,7 +877,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: Parcial_1_Rv
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: Parcial_1_Rv
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0

@@ -18,6 +18,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Yeff.unity
     guid: dbb26be76b16ccd4f996afc713242a56
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 4eb5ef5636c50054f97aabe499f811e7, type: 2}
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 1c0c6e8a575e92840bb8d63dc79f4ded, type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 5e3219d9500adec4a99f8ff16868c825, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 2a6671dffad03a340a70333b96c9f593, type: 2}
+    com.unity.xr.magicleap.magic_leap_settings: {fileID: 11400000, guid: 245d70ffe6039ce4693bf9932d5854f4, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: c8ce50d14190e3348a549079b8310cd2, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: bb9a30e9526bc4b4694649038986452c, type: 2}
