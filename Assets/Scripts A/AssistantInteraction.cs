@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(AudioSource))]
 public class AssistantInteraction : MonoBehaviour
@@ -32,6 +33,7 @@ public class AssistantInteraction : MonoBehaviour
     // Utilidades
     [Header("Utility")]
     public float waitToStartWelcomeAudio=3;
+    public Text textUI;
     [HideInInspector] public string actualZone;
     private AudioSource audioSource;
 
@@ -279,4 +281,17 @@ public class AssistantInteraction : MonoBehaviour
             Debug.LogWarning("AudioClip (" + actualZone + "_MoreInfo" + ") no encontrado.");
         }
     }
+
+
+
+
+
+    // Interfaz de usuario
+    public void actualiceCanvas(string zoneName)
+    {
+        string[] zona = zoneName.Split('_');
+        textUI.text = $"En este momento estamos en: {zona[1]}";
+    }
+
+
 }
