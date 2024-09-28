@@ -9,7 +9,6 @@ public class AssistantInteraction : MonoBehaviour
 
     public Camera arCamera;              // Cámara AR
     public Transform pjParaPruebas;
-    public Transform lockPosition;       // Objeto vacío hijo de la cámara que define la posición de bloqueo
     public float heightOffset = 1.0f;    // Altura del asistente respecto al dispositivo
     public Canvas worldSpaceCanvas;      // Canvas hijo del asistente
 
@@ -18,14 +17,14 @@ public class AssistantInteraction : MonoBehaviour
     private Vector3 targetPosition;      // Posición objetivo del asistente
     [Header("Movement")]
     public float smoothSpeed = 2.0f;     // Velocidad de interpolación para suavizar el movimiento
-    public float followRadius = 4.0f;    // Radio al que sigue el asistente
-    public float maxDistanceBetween = 5.0f; // Distancia máxima con el usuario
+    public float followRadius = 2.0f;    // Radio al que sigue el asistente
+    public float maxDistanceBetween = 4.0f; // Distancia máxima con el usuario
 
     //Aleatoriedad
     private float timeToChangePosition = 5; // Tiempo restante para cambiar la posición
     private float angle;
-    private float xOffset;
-    private float zOffset;
+    private float xOffset = 1.0f;
+    private float zOffset = 1.0f;
     [Header("Randomnes")]
     public float minWaitTime = 5.0f;   // Tiempo mínimo para cambiar de posición
     public float maxWaitTime = 10.0f;   // Tiempo máximo para cambiar de posición
@@ -80,7 +79,8 @@ public class AssistantInteraction : MonoBehaviour
         else {
             if (Application.isEditor)
             {
-                if (Vector3.Distance(transform.position, pjParaPruebas.transform.position)>maxDistanceBetween) { 
+                if (Vector3.Distance(transform.position, pjParaPruebas.transform.position)>maxDistanceBetween)
+                { 
                     ToggleAssistantState();
                 }
             }
@@ -164,8 +164,8 @@ public class AssistantInteraction : MonoBehaviour
     {
         isFollowing = false;
 
-        // Establecer nueva posición del asistente a la posición de bloqueo (definida por el objeto lockPosition)
-        targetPosition = lockPosition.position;
+        // Establecer posición del asistente a su última posición
+        targetPosition = transform.position;
 
         // Activar el Canvas si no está activo
         if (worldSpaceCanvas != null && !worldSpaceCanvas.gameObject.activeSelf)
@@ -213,9 +213,17 @@ public class AssistantInteraction : MonoBehaviour
         angle = Random.Range(0f, Mathf.PI * 2);
 
         // Calcular una posición aleatoria en un círculo alrededor de la cámara
-        float randomRadius = Random.Range(-followRadius, followRadius);
-        xOffset = Mathf.Cos(angle) * randomRadius;
-        zOffset = Mathf.Sin(angle) * randomRadius;
+        float randomRadius = Random.Range(-1, 1);
+
+        if (randomRadius <= 0)
+        {
+            xOffset = Mathf.Cos(angle) * (-followRadius);
+            zOffset = Mathf.Sin(angle) * (-followRadius);
+        }
+        else {
+            xOffset = Mathf.Cos(angle) * (followRadius);
+            zOffset = Mathf.Sin(angle) * (followRadius);
+        }
     }
 
     // Asigna un tiempo aleatorio para cambiar de posición nuevamente

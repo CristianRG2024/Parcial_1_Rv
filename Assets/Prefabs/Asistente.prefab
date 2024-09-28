@@ -219,12 +219,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arCamera: {fileID: 0}
   pjParaPruebas: {fileID: 0}
-  lockPosition: {fileID: 0}
-  heightOffset: 0
+  heightOffset: -1
   worldSpaceCanvas: {fileID: 6380832413460476361}
   isFollowing: 1
   smoothSpeed: 2
-  followRadius: 4
+  followRadius: 2
   maxDistanceBetween: 5
   minWaitTime: 8
   maxWaitTime: 12
