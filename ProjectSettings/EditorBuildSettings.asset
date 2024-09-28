@@ -8,13 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Principal.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: "Assets/Scenes/Andr\xE9s.unity"
     guid: 3d99a5cb12f3ae34d95dc81f17434147
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Cristian.unity
     guid: 934834dc022839746bb662869c3c1abd
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Yeff.unity
     guid: dbb26be76b16ccd4f996afc713242a56
   m_configObjects:
