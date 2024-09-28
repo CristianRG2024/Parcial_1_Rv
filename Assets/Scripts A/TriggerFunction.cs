@@ -14,7 +14,7 @@ public class TriggerFunction : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player")) {
+        if (other.CompareTag("Assistant")) {
             assistant.actualZone = this.name;
             assistant.playAudio(this.name);
         }
