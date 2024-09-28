@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 115609890}
   - component: {fileID: 115609894}
   m_Layer: 0
-  m_Name: Anime_Wow
+  m_Name: Trigger_EntryHouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1177,10 +1177,6 @@ PrefabInstance:
       objectReference: {fileID: 612105825}
     - target: {fileID: 4000129493700646230, guid: 6efbe429ee1abf1468985d927f023a68, type: 3}
       propertyPath: pjParaPruebas
-      value: 
-      objectReference: {fileID: 435213270}
-    - target: {fileID: 4000129493700646230, guid: 6efbe429ee1abf1468985d927f023a68, type: 3}
-      propertyPath: PRUEBA_personaje
       value: 
       objectReference: {fileID: 435213270}
     - target: {fileID: 5164602857412696401, guid: 6efbe429ee1abf1468985d927f023a68, type: 3}

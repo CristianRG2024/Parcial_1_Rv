@@ -19,6 +19,7 @@ public class AssistantInteraction : MonoBehaviour
     [Header("Movement")]
     public float smoothSpeed = 2.0f;     // Velocidad de interpolación para suavizar el movimiento
     public float followRadius = 4.0f;    // Radio al que sigue el asistente
+    public float maxDistanceBetween = 5.0f; // Distancia máxima con el usuario
 
     //Aleatoriedad
     private float timeToChangePosition = 5; // Tiempo restante para cambiar la posición
@@ -32,6 +33,7 @@ public class AssistantInteraction : MonoBehaviour
     // Utilidades
     [Header("Utility")]
     public float waitToStartWelcomeAudio=3;
+    [HideInInspector] public string actualZone;
     private AudioSource audioSource;
 
     void Awake() {
@@ -75,6 +77,20 @@ public class AssistantInteraction : MonoBehaviour
             // Seguir al usuario
             ChaseUser();
         }
+        else {
+            if (Application.isEditor)
+            {
+                if (Vector3.Distance(transform.position, pjParaPruebas.transform.position)>maxDistanceBetween) { 
+                    ToggleAssistantState();
+                }
+            }
+            else {
+                if (Vector3.Distance(transform.position, arCamera.transform.position) > maxDistanceBetween)
+                {
+                    ToggleAssistantState();
+                }
+            }
+        }
 
         // Movimiento
         transform.position = Vector3.Slerp(transform.position, targetPosition, Time.deltaTime * smoothSpeed);
@@ -94,13 +110,8 @@ public class AssistantInteraction : MonoBehaviour
                 if (Physics.Raycast(ray, out hit))
                 {
                     Debug.Log("Golpe: " + hit.collider.gameObject.name);
-                    if (hit.transform.parent != null) // Revisar si el objeto golpeado tiene un padre
-                    {
-                        GameObject parent = hit.transform.parent.gameObject;
-                        if (parent.CompareTag("Asistente")) // Si el padre es el asistente
-                        {
-                            ToggleAssistantState();
-                        }
+                    if (hit.collider.CompareTag("Asistente")) {
+                        ToggleAssistantState();
                     }
                 }
             }
@@ -117,19 +128,15 @@ public class AssistantInteraction : MonoBehaviour
                 // Solo detectar el toque cuando el estado es "Began", que es cuando el usuario toca la pantalla
                 if (touch.phase == TouchPhase.Began)
                 {
-                    Ray ray = arCamera.ScreenPointToRay(Input.mousePosition);
+                    Ray ray = arCamera.ScreenPointToRay(touch.position);
                     RaycastHit hit;
 
                     if (Physics.Raycast(ray, out hit))
                     {
                         Debug.Log("Golpe: " + hit.collider.gameObject.name);
-                        if (hit.transform.parent != null) // Revisar si el objeto golpeado tiene un padre
+                        if (hit.collider.CompareTag("Asistente"))
                         {
-                            GameObject parent = hit.transform.parent.gameObject;
-                            if (parent.CompareTag("Asistente")) // Si el padre es el asistente
-                            {
-                                ToggleAssistantState();
-                            }
+                            ToggleAssistantState();
                         }
                     }
                 }
@@ -219,6 +226,15 @@ public class AssistantInteraction : MonoBehaviour
 
     // Reproducción de audios
 
+    // Audio inicial
+    IEnumerator IniciarAudio()
+    {
+        AudioClip newClip = Resources.Load<AudioClip>("Audio_Bienvenida");
+        audioSource.clip = newClip;
+        yield return new WaitForSeconds(waitToStartWelcomeAudio);
+        audioSource.Play();
+    }
+
     // Audio por zonas (Interacción desde script TriggerFunction)
     public void playAudio(string audioName)
     {
@@ -238,12 +254,21 @@ public class AssistantInteraction : MonoBehaviour
         }
     }
 
-    // Audio inicial
-    IEnumerator IniciarAudio() {
-        AudioClip newClip = Resources.Load<AudioClip>("Audio_Bienvenida");
-        audioSource.clip = newClip;
-        yield return new WaitForSeconds(waitToStartWelcomeAudio);
-        audioSource.Play();
-    }
+    // Audio más info
+    public void playMoreInfoAudio()
+    {
+        // Cargar el AudioClip desde la carpeta Resources
+        AudioClip newClip = Resources.Load<AudioClip>(actualZone + "_MoreInfo");
 
+        // Si se encuentra el AudioClip, cambiarlo en el AudioSource y reproducir
+        if (newClip != null)
+        {
+            audioSource.clip = newClip;
+            audioSource.Play();
+        }
+        else
+        {
+            Debug.LogWarning("AudioClip (" + actualZone + "_MoreInfo" + ") no encontrado.");
+        }
+    }
 }
