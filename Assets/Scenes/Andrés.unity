@@ -1176,6 +1176,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 612105825}
     - target: {fileID: 4000129493700646230, guid: 6efbe429ee1abf1468985d927f023a68, type: 3}
+      propertyPath: pjParaPruebas
+      value: 
+      objectReference: {fileID: 435213270}
+    - target: {fileID: 4000129493700646230, guid: 6efbe429ee1abf1468985d927f023a68, type: 3}
       propertyPath: PRUEBA_personaje
       value: 
       objectReference: {fileID: 435213270}

@@ -8,7 +8,7 @@ public class AssistantInteraction : MonoBehaviour
     public static AssistantInteraction assistantInstance;
 
     public Camera arCamera;              // Cámara AR
-    public Transform PRUEBA_personaje;
+    public Transform pjParaPruebas;
     public Transform lockPosition;       // Objeto vacío hijo de la cámara que define la posición de bloqueo
     public float heightOffset = 1.0f;    // Altura del asistente respecto al dispositivo
     public Canvas worldSpaceCanvas;      // Canvas hijo del asistente
@@ -76,25 +76,61 @@ public class AssistantInteraction : MonoBehaviour
             ChaseUser();
         }
 
-        // Movimiento y orientación de asistente
-        transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * smoothSpeed);
-        transform.LookAt(PRUEBA_personaje.transform);
+        // Movimiento
+        transform.position = Vector3.Slerp(transform.position, targetPosition, Time.deltaTime * smoothSpeed);
 
-        // Detectar el clic en el asistente
-        if (Input.GetMouseButtonDown(0))
+        // Detectar toque en pantalla al asistente
+        if (Application.isEditor)
         {
-            Ray ray = arCamera.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
+            // Orientación
+            transform.LookAt(pjParaPruebas.transform);
 
-            if (Physics.Raycast(ray, out hit))
+            // Detectar el clic en el asistente
+            if (Input.GetMouseButtonDown(0))
             {
-                Debug.Log("Golpe: " + hit.collider.gameObject.name);
-                if (hit.transform.parent != null) // Revisar si el objeto golpeado tiene un padre
+                Ray ray = arCamera.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
+
+                if (Physics.Raycast(ray, out hit))
                 {
-                    GameObject parent = hit.transform.parent.gameObject;
-                    if (parent.CompareTag("Asistente")) // Si el padre es el asistente
+                    Debug.Log("Golpe: " + hit.collider.gameObject.name);
+                    if (hit.transform.parent != null) // Revisar si el objeto golpeado tiene un padre
                     {
-                        ToggleAssistantState();
+                        GameObject parent = hit.transform.parent.gameObject;
+                        if (parent.CompareTag("Asistente")) // Si el padre es el asistente
+                        {
+                            ToggleAssistantState();
+                        }
+                    }
+                }
+            }
+        }
+        else
+        {
+            // Orientación
+            transform.LookAt(arCamera.transform);
+
+            if (Input.touchCount > 0)
+            {
+                Touch touch = Input.GetTouch(0);
+
+                // Solo detectar el toque cuando el estado es "Began", que es cuando el usuario toca la pantalla
+                if (touch.phase == TouchPhase.Began)
+                {
+                    Ray ray = arCamera.ScreenPointToRay(Input.mousePosition);
+                    RaycastHit hit;
+
+                    if (Physics.Raycast(ray, out hit))
+                    {
+                        Debug.Log("Golpe: " + hit.collider.gameObject.name);
+                        if (hit.transform.parent != null) // Revisar si el objeto golpeado tiene un padre
+                        {
+                            GameObject parent = hit.transform.parent.gameObject;
+                            if (parent.CompareTag("Asistente")) // Si el padre es el asistente
+                            {
+                                ToggleAssistantState();
+                            }
+                        }
                     }
                 }
             }
@@ -146,17 +182,21 @@ public class AssistantInteraction : MonoBehaviour
     void ChaseUser() {
 
         // Seguir al usuario
-        //targetPosition = new Vector3(
-        //    arCamera.transform.position.x + xOffset,
-        //    arCamera.transform.position.y + heightOffset,
-        //    arCamera.transform.position.z + zOffset
-        //);
-
-        targetPosition = new Vector3(
-            PRUEBA_personaje.transform.position.x + xOffset,
-            PRUEBA_personaje.transform.position.y + heightOffset,
-            PRUEBA_personaje.transform.position.z + zOffset
-        );
+        if (Application.isEditor)
+        {
+            targetPosition = new Vector3(
+                pjParaPruebas.transform.position.x + xOffset,
+                pjParaPruebas.transform.position.y + heightOffset,
+                pjParaPruebas.transform.position.z + zOffset
+            );
+        }
+        else {
+            targetPosition = new Vector3(
+                arCamera.transform.position.x + xOffset,
+                arCamera.transform.position.y + heightOffset,
+                arCamera.transform.position.z + zOffset
+            );
+        }
     }
 
     // Asigna una nueva posición aleatoria alrededor del usuario dentro de un radio determinado
@@ -176,9 +216,6 @@ public class AssistantInteraction : MonoBehaviour
     {
         timeToChangePosition = Random.Range(minWaitTime, maxWaitTime);
     }
-
-
-
 
     // Reproducción de audios
 

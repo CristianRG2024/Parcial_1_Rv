@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5373558674235529177}
   - component: {fileID: 8095594871117843567}
   - component: {fileID: 5008182635920641316}
-  - component: {fileID: 1302333032279028135}
+  - component: {fileID: 2245409598354384553}
   - component: {fileID: 3804408364380119880}
   - component: {fileID: 4000129493700646230}
   m_Layer: 0
@@ -88,8 +88,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1302333032279028135
-MeshCollider:
+--- !u!65 &2245409598354384553
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -106,10 +106,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -8251302285044789390, guid: 5f547da8b4bcfd942a0194818f7fb589, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.7380897, y: 0.4474081, z: 0.43268237}
+  m_Center: {x: 0, y: 0.22370403, z: 0}
 --- !u!82 &3804408364380119880
 AudioSource:
   m_ObjectHideFlags: 0
@@ -219,7 +218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arCamera: {fileID: 0}
-  PRUEBA_personaje: {fileID: 0}
+  pjParaPruebas: {fileID: 0}
   lockPosition: {fileID: 0}
   heightOffset: 1
   worldSpaceCanvas: {fileID: 6380832413460476361}
