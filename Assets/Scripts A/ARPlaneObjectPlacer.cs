@@ -54,8 +54,8 @@ public class ARPlaneObjectPlacer : MonoBehaviour
         if (anchor != null)
         {
             // Instanciar el objeto 3D sobre la posición del ancla
-            // Vector3 pos = new Vector3(anchor.transform.position.x, anchor.transform.position.y, anchor.transform.position.z+15);
-            GameObject placedObject = Instantiate(objectToPlacePrefab, anchor.transform.position, anchor.transform.rotation);
+            Vector3 pos = new Vector3(anchor.transform.position.x, anchor.transform.position.y, anchor.transform.position.z+15);
+            GameObject placedObject = Instantiate(objectToPlacePrefab, pos, anchor.transform.rotation);
 
             // Hacer que el objeto 3D sea hijo del ancla para que siga su posición
             placedObject.transform.SetParent(anchor.transform);
@@ -64,7 +64,6 @@ public class ARPlaneObjectPlacer : MonoBehaviour
             anchors.Add(anchor);
         }
     }
-
 
     // Opcional: Limpiar las anclas y objetos colocados
     public void ClearAnchors()
